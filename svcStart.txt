@@ -1,0 +1,49 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = () => {
+  const width = 400;
+  const height = 400;
+  const rects = [
+    { x: 100, y: 100, width: 250, height: 30, color: "orange" },
+    { x: 100, y: 200, width: 200, height: 30, color: "purple" },
+    { x: 100, y: 300, width: 100, height: 30, color: "pink" },
+  ];
+  const lines = [
+    {x1:100, y1:0, x2:100, y2:400, color:"black"},
+    {x1:90, y1:115, x2:100, y2:115, color:"black"},
+    {x1:90, y1:215, x2:100, y2:215, color:"black"},
+    {x1:90, y1:315, x2:100, y2:315, color:"black"},
+  ];
+  return (
+    <svg width={width} height={height}>
+      {rects.map(({ x, y, width, height, color }, i) => (
+        <rect key={i} x={x} y={y} width={width} height={height} fill={color} />
+      ))}
+
+      {lines.map(({x1, y1, x2, y2, color}, i) => (
+        <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={color} />
+      ))}
+
+      {/* <line x1="100" y1="0" x2="100" y2="400" stroke="black"/>
+      <line x1="90" y1="115" x2="100" y2="115" stroke="black"/>
+      <line x1="90" y1="215" x2="100" y2="215" stroke="black"/>
+      <line x1="90" y1="315" x2="100" y2="315" stroke="black"/> */}
+      
+
+      <text x="80" y="120" fontSize="15" textAnchor="middle" fill="black">
+        A
+      </text>
+
+      <text x="80" y="220" fontSize="15" textAnchor="middle" fill="black">
+        B
+      </text>
+
+      <text x="80" y="320" fontSize="15" textAnchor="middle" fill="black">
+        C
+      </text>
+    </svg>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
