@@ -1,5 +1,5 @@
 {
-  "name": "svg-start",
+  "name": "sunburst-religion",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,12 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "d3": "^7.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.2.11"
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.3.1"
   }
 }
